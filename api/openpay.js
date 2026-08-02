@@ -8,7 +8,10 @@ export default async function handler(req, res) {
   try {
     const resp = await fetch(DESTINO, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'User-Agent': 'openpay-vercel-relay/1.0',
+      },
       body: JSON.stringify(req.body),
     });
 
