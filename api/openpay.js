@@ -44,7 +44,7 @@ export default async function handler(req, res) {
   const tipo = data.type ?? null;
 
   if (tipo === 'verification') {
-    console.log('VERIFICACION RECIBIDA');
+    console.log('VERIFICACION RECIBIDA:', data.verification_code, JSON.stringify(data));
     return res.status(200).json({ success: true });
   }
 
